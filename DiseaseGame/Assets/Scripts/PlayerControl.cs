@@ -42,9 +42,10 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(dashDuration);
 
         moveSpeed = oldSpeed;
+        isDashing = false;
 
         yield return new WaitForSeconds(dashCooldown);
-        isDashing = false;
+        
 
         yield break;
     }
