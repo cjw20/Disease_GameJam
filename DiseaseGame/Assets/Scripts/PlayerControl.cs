@@ -50,9 +50,18 @@ public class PlayerControl : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        
-
+    {       
         rb.velocity = movement * moveSpeed;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Enemy")
+        {
+            if (isDashing) //only able to destroy enemies while dashing
+            {
+                Destroy(other.gameObject);
+            }
+        }
     }
 }

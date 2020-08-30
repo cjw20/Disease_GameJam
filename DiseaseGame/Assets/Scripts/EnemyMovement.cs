@@ -38,12 +38,23 @@ public class EnemyMovement : MonoBehaviour
             {
                 closestDistance = distance;
                 currentTarget = redCell;
+                
             }
         }
-
+        redCells.Remove(currentTarget); //removes current target from list of possible targets
         agent.destination = currentTarget.transform.position;
     }
 
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Target")
+        {
+            Destroy(other.gameObject);
+            FindTarget();
+            //tell other cells to find new targets as well
+        }
+    }
     void Update()
     {
         
