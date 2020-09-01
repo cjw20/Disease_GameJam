@@ -52,7 +52,7 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {       
-        rb.velocity = movement * moveSpeed;
+        rb.AddForce(movement * moveSpeed);
     }
 
     void OnTriggerEnter2D(Collider2D other)
