@@ -14,10 +14,17 @@ public class PlayerControl : MonoBehaviour
     public float dashDuration; //how long the speed boost lasts
     public float dashCooldown; //how long player has to wait before dashing again
 
+    public int maxHealth;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+    public int enemyDamage; //how much damage bacteria deal to player
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -62,6 +69,11 @@ public class PlayerControl : MonoBehaviour
             if (isDashing) //only able to destroy enemies while dashing
             {
                 Destroy(other.gameObject);
+            }
+            else
+            {
+                currentHealth -= enemyDamage;
+                healthBar.SetHealth(currentHealth);
             }
         }
     }

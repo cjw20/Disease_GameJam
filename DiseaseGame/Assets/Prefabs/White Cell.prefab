@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4312842249116887039}
   - component: {fileID: 4312842249116887038}
   - component: {fileID: 4312842249116887037}
-  - component: {fileID: 1646017293}
+  - component: {fileID: 1531899249}
   m_Layer: 0
   m_Name: White Cell
   m_TagString: Player
@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a1fe4a7b76e2904eae69073f813a9f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97681f28e63347143ab58b2c5b96be09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,12 +119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4312842249116887038}
-  moveSpeed: 10
-  dashModifier: 2
+  moveSpeed: 5
+  dashModifier: 1.5
   dashDuration: 1
   dashCooldown: 1
---- !u!58 &1646017293
-CircleCollider2D:
+--- !u!70 &1531899249
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,6 +136,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.040871263, y: 0.005838871}
-  serializedVersion: 2
-  m_Radius: 0.5912869
+  m_Offset: {x: 0.52136576, y: 0.22726178}
+  m_Size: {x: 0.9128349, y: 1.3762712}
+  m_Direction: 0
