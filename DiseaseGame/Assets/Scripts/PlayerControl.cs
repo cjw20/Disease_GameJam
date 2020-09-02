@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControl : MonoBehaviour
 {
 
@@ -20,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     public HealthBar healthBar;
 
     public int enemyDamage; //how much damage bacteria deal to player
+    public GameControl gameControl;
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +76,13 @@ public class PlayerControl : MonoBehaviour
             {
                 currentHealth -= enemyDamage;
                 healthBar.SetHealth(currentHealth);
+
+                if(currentHealth <= 0)
+                {
+                    gameControl.GameOver();
+                }
             }
         }
     }
+   
 }
