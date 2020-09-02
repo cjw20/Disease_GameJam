@@ -19,14 +19,15 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent2D>();
 
         currentPosition = transform.position;
-        redCells = GameObject.FindGameObjectsWithTag("Target").ToList(); ; //gets all remaining red cells when spawned
+        //redCells = GameObject.FindGameObjectsWithTag("Target").ToList(); ; //gets all remaining red cells when spawned
         FindTarget();
-
+        Debug.Log("yea");
     }
 
     void FindTarget()
     {
         //add check if list empty here!!!!
+        redCells = GameObject.FindGameObjectsWithTag("Target").ToList(); ; //gets all remaining red cells when spawned
 
         float closestDistance = Mathf.Infinity;  //sets closest distance to infinity so any other value will override it
 
@@ -57,6 +58,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
-        
+        if (!agent.pathPending)
+            FindTarget();
     }
 }
