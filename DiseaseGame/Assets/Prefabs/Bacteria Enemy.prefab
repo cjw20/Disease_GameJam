@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: edf07d10a992bc44e9d6d4d9b81fb1d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64b6e52bdaff3254baf5c4df73e44212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBody: {fileID: 1405275514}
+  timeToKill: 2
 --- !u!114 &1405275518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +155,7 @@ MonoBehaviour:
   _acceleration: 8
   _stoppingDistance: 0
   _autoBraking: 1
-  _radius: 0.6
+  _radius: 1.2
   _quality: 4
   _priority: 50
   _autoRepath: 1
@@ -170,6 +172,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12968135, y: 0.1203084}
-  m_Size: {x: 0.58548784, y: 0.8236513}
+  m_Offset: {x: -0.025433838, y: -0.33436453}
+  m_Size: {x: 1.8605117, y: 2.1137066}
   m_Direction: 0

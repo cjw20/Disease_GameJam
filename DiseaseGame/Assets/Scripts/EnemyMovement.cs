@@ -12,6 +12,8 @@ public class EnemyMovement : MonoBehaviour
     List<GameObject> redCells = new List<GameObject>();
     //GameObject[] redCells; //cells that bacteria are targeting
     GameObject currentTarget;
+    bool isAttacking = false; //whether or not the bacteria is in contact with a red cell
+    public float timeToKill; //time it takes a bacteria to kill a red cell
 
     NavMeshAgent2D agent;
     void Start()
@@ -21,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         currentPosition = transform.position;
         //redCells = GameObject.FindGameObjectsWithTag("Target").ToList(); ; //gets all remaining red cells when spawned
         FindTarget();
-        Debug.Log("yea");
+        
     }
 
     void FindTarget()
@@ -43,7 +45,12 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         redCells.Remove(currentTarget); //removes current target from list of possible targets
-        agent.destination = currentTarget.transform.position;
+
+        if(currentTarget != null)
+        {
+            agent.destination = currentTarget.transform.position;
+        }
+        
     }
 
 
@@ -51,10 +58,25 @@ public class EnemyMovement : MonoBehaviour
     {
         if(other.tag == "Target")
         {
-            Destroy(other.gameObject);
-            FindTarget();
-            //tell other cells to find new targets as well
+            if (!isAttacking)
+            {
+                StartCoroutine(Attack(other.gameObject));
+            }
+            //Destroy(other.gameObject);
+            //FindTarget();
+            
         }
+    }
+
+    IEnumerator Attack(GameObject cell)
+    {
+        isAttacking = true;
+
+        yield return new WaitForSeconds(timeToKill);
+
+        Destroy(cell);
+
+       
     }
     void Update()
     {
