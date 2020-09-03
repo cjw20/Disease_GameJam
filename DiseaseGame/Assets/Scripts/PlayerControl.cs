@@ -22,6 +22,9 @@ public class PlayerControl : MonoBehaviour
 
     public int enemyDamage; //how much damage bacteria deal to player
     public GameControl gameControl;
+    public ScoreCounter scoreCounter;
+
+    int score = 0; //how many bacteria the player has killed
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +74,8 @@ public class PlayerControl : MonoBehaviour
             if (isDashing) //only able to destroy enemies while dashing
             {
                 Destroy(other.gameObject);
+                score++;
+                scoreCounter.UpdateText(score);
             }
             else
             {
