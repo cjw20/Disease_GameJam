@@ -2025,7 +2025,7 @@ PrefabInstance:
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
       propertyPath: dashModifier
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
@@ -2035,12 +2035,12 @@ PrefabInstance:
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
       propertyPath: currentHealth
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
@@ -2057,6 +2057,11 @@ PrefabInstance:
       propertyPath: scoreCounter
       value: 
       objectReference: {fileID: 1475546189}
+    - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
+        type: 3}
+      propertyPath: dashCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebe1c8187af8cad49a9e4d6a51e42a24, type: 3}
 --- !u!1 &544323998
@@ -2122,7 +2127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 15
-  interval: 4
+  interval: 5.5
   enemy: {fileID: 8193272740527042978, guid: 75db6006b05c92b44a184f17569a153d, type: 3}
 --- !u!1 &604063038
 GameObject:
@@ -2474,7 +2479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 25
-  interval: 5
+  interval: 6
   enemy: {fileID: 8193272740527042978, guid: 75db6006b05c92b44a184f17569a153d, type: 3}
 --- !u!1001 &753418380
 PrefabInstance:
@@ -5594,7 +5599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
-  interval: 3
+  interval: 4.5
   enemy: {fileID: 8193272740527042978, guid: 75db6006b05c92b44a184f17569a153d, type: 3}
 --- !u!1 &1830482335
 GameObject:
