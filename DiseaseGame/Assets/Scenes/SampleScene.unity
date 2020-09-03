@@ -835,7 +835,7 @@ PrefabInstance:
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}
       propertyPath: dashModifier
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4312842249116887037, guid: ebe1c8187af8cad49a9e4d6a51e42a24,
         type: 3}

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 97681f28e63347143ab58b2c5b96be09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74e2d82c16d2e79439db1cf4e772744c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,6 +123,12 @@ MonoBehaviour:
   dashModifier: 1.5
   dashDuration: 1
   dashCooldown: 1
+  maxHealth: 0
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  enemyDamage: 0
+  gameControl: {fileID: 0}
+  scoreCounter: {fileID: 0}
 --- !u!70 &1531899249
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
